@@ -4,6 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "start": "concurrently --kill-others \"cd apps/layout && yarn start\" \"cd apps/settings && yarn start\" \"cd apps/shopping && yarn start\""
+  },
   "workspaces": [
     "apps/*"
   ],
@@ -13,6 +16,7 @@
   },
   "devDependencies": {
     "@types/react": "^18.2.13",
-    "@types/react-dom": "^18.2.6"
+    "@types/react-dom": "^18.2.6",
+    "concurrently": "^8.2.0"
   }
 }
