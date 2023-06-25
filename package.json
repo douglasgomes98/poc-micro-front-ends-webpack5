@@ -5,7 +5,9 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "concurrently --kill-others \"cd apps/layout && yarn start\" \"cd apps/settings && yarn start\" \"cd apps/shopping && yarn start\""
+    "start": "concurrently --kill-others \"cd apps/layout && yarn start\" \"cd apps/settings && yarn start\" \"cd apps/shopping && yarn start\"",
+    "build": "concurrently --kill-others \"cd apps/layout && yarn build\" \"cd apps/settings && yarn build\" \"cd apps/shopping && yarn build\"",
+    "clean": "concurrently --kill-others \"cd apps/layout && yarn clean\" \"cd apps/settings && yarn clean\" \"cd apps/shopping && yarn clean\""
   },
   "workspaces": [
     "apps/*"
